@@ -1,0 +1,101 @@
+Variables
+A variable in Python is like a storage box where you can keep data values. It acts as a label or reference to a specific piece of information. Variables are fundamental to programming as they help store, modify, and retrieve data during the execution of a program.
+
+Key Characteristics of Variables in Python:
+Dynamic Typing: You don’t need to declare the type of a variable explicitly. Python infers the type based on the value assigned.
+
+x = 10   # x is an integer
+y = "Hello"  # y is a string
+z = 3.14  # z is a float
+
+
+Reassignment: You can change the value of a variable during the program's execution.
+
+x = 10
+x = "Now I am a string"
+
+Naming Rules:
+Can contain letters (a-z, A-Z), digits (0-9), and underscores (_).
+Cannot start with a digit.
+Cannot be a Python keyword (e.g., if, else, True).
+Case-sensitive (my_var and My_Var are different).
+
+Example of Variables:
+name = "Alice"
+age = 25
+height = 5.6
+is_student = True
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+Data Types
+A data type defines the kind of value a variable holds. Python provides several built-in data types to handle different types of data.
+
+Common Data Types in Python:
+
+Numeric Types:
+int: Integer values (e.g., 56, -7).
+float: Decimal numbers (e.g., 2.15, -0.7).
+complex: Complex numbers with a real and imaginary part (e.g., 3+4j).
+
+x = 30  # int
+y = 2.15  # float
+z = 3 + 4j  # complex
+
+Text Type:
+str: Sequence of characters enclosed in quotes.
+greeting = "Hello, World!"
+
+Boolean Type:
+bool: Represents True or False.
+is_active = True
+
+Sequence Types:
+---------------
+list: Ordered, mutable collection of items.
+fruits = ["orange", "grapes", "kiwi"]
+
+tuple: Ordered, immutable collection of items.
+point = (20, 40)
+
+range: Represents a sequence of numbers.
+numbers = range(1, 10)  # From 1 to 9
+
+Mapping Type:
+
+dict: Unordered collection of key-value pairs.
+person = {"name": "Ronak", "age": 36}
+
+Set Types:
+set: Unordered, mutable collection of unique items.
+unique_numbers = {1, 2, 3, 3, 4}
+frozenset: Immutable version of a set
+
+a = frozenset([1, 2, 3])
+b = frozenset([3, 4, 5])
+# Union
+print(a | b)  # frozenset({1, 2, 3, 4, 5})
+# Intersection
+print(a & b)  # frozenset({3})
+# Difference
+print(a - b)  # frozenset({1, 2})
+
+
+
+None Type:
+NoneType: Represents the absence of a value.
+result = None
+
+Checking Data Type
+To find the type of a variable, use the type() function:
+x = 10
+print(type(x))  # Output: <class 'int'>
+
+Type Casting
+Python allows you to convert a variable from one type to another (type casting):
+x = 5  # int
+y = float(x)  # Convert to float
+z = str(x)  # Convert to string
+
+Why Understand Variables and Data Types?
+To store and manipulate data effectively.
+To write error-free programs by understanding type compatibility.
+To optimize memory usage and processing speed.
