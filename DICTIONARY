@@ -1,0 +1,92 @@
+What is a Dictionary in Python?
+A dictionary in Python is an unordered, mutable, and indexed collection. It stores data in key-value pairs, where each key must be unique and immutable (like strings, numbers, or tuples). Values, however, can be of any data type and may duplicate
+
+Why Use a Dictionary?
+Quick access to data using keys (like a real-world dictionary where you look up the meaning of a word).
+Useful for representing structured data
+
+Creating a Dictionary
+You can create a dictionary using curly braces {} or the dict() constructor.
+# Using curly braces
+my_dict = {"name": "Alice", "age": 25, "city": "New York"}
+
+# Using dict()
+another_dict = dict(name="Bob", age=30, city="Los Angeles")
+
+print(my_dict)
+print(another_dict)
+
+Accessing Elements
+Use the key to access a value
+# Accessing a value using its key
+print(my_dict["name"])  # Output: Alice
+
+# Using the `get` method (avoids KeyError)
+print(my_dict.get("age"))  # Output: 25
+print(my_dict.get("gender", "Not Specified"))  # Output: Not Specified
+
+
+
+Modifying a Dictionary
+You can add, update, or delete key-value pairs
+my_dict["country"] = "USA"  # Add a new key-value pair
+my_dict["age"] = 26         # Update the value for an existing key
+print(my_dict)
+
+# Remove a specific key-value pair
+del my_dict["city"]
+
+# Using `pop` (returns the removed value)
+removed_value = my_dict.pop("age")
+print(removed_value)  # Output: 26
+
+# Clear all key-value pairs
+my_dict.clear()
+print(my_dict)  # Output: {}
+
+
+Iterating Over a Dictionary
+You can loop through keys, values, or key-value pairs.
+
+# Loop through keys
+for key in my_dict.keys():
+    print(key)
+
+# Loop through values
+for value in my_dict.values():
+    print(value)
+
+# Loop through key-value pairs
+for key, value in my_dict.items():
+    print(f"{key}: {value}")
+
+
+Common Dictionary Methods
+Method	Description
+keys()	Returns a view of all keys
+values()	Returns a view of all values
+items()	Returns a view of all key-value pairs
+update()	Updates the dictionary with another dictionary or iterable
+pop(key)	Removes and returns the value of the specified key
+popitem()	Removes and returns the last inserted key-value pair
+clear()	Removes all elements
+
+
+Merging Dictionaries
+You can merge dictionaries using update() or the ** unpacking operator.
+
+dict1 = {"a": 1, "b": 2}
+dict2 = {"b": 3, "c": 4}
+
+# Using update
+dict1.update(dict2)
+print(dict1)  # Output: {'a': 1, 'b': 3, 'c': 4}
+
+# Using dictionary unpacking
+merged_dict = {**dict1, **dict2}
+print(merged_dict)  # Output: {'a': 1, 'b': 3, 'c': 4}
+
+Key Points:
+1.Unique keys: Each key must be different; if the same key is used again, the old value will be replaced.
+2.Immutable keys: Keys should be unchangeable types such as strings, numbers, or tuples. Lists and dictionaries cannot be used as keys.
+3.Dictionary order: In Python versions below 3.7, dictionaries do not follow any order. From Python 3.7 onward, they keep the order in which items are added.
